@@ -16,7 +16,7 @@
 
                     <form action="{{ route('habits.update', $habit) }}" method="POST">
                         @csrf
-                        @method('PUT') <!-- Agrega este campo para indicar el método PUT para actualizar -->
+                        @method('PUT')
 
                         <div class="mb-4">
                             <label for="name" class="block text-sm font-medium text-gray-700 dark:text-white">Habit Name:</label>
@@ -38,10 +38,11 @@
                             </div>
 
                             <div>
-                                <label for="end_date" class="block text-sm font-medium text-gray-700 dark:text-white">End Date:</label>
-                                <input type="date" name="end_date" id="end_date" required value="{{ $habit->end_date }}"
+                                <label for="reminder_time" class="block text-sm font-medium text-gray-700 dark:text-white">Reminder Time:</label>
+                                <input type="time" name="reminder_time" id="reminder_time" required value="{{ $habit->reminder_time }}"
                                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
+
                         </div>
 
                         <div class="mb-4">

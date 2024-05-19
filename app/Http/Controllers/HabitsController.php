@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Habits;
+use App\Models\Reminders;
 use Illuminate\Http\Request;
 
 class HabitsController extends Controller
@@ -31,29 +32,30 @@ class HabitsController extends Controller
      */
     public function store(Request $request)
     {
-        /**
-         * 'user_id',
-    'name',
-    'description',
-    'frequency',
-    'start_date',
-    'end_date',
-    'created_at',
-    'updated_at',
-         */
+        $habit = new Habits();
+
         $request->validate([
             'name' => 'required',
             'description' => 'required',
         ]);
 
-        Habits::create([
+       $habit = Habits::create([
             'user_id' => auth()->id(),
             'name' => $request->name,
             'description' => $request->description,
-            'category' => $request->category, // Add this line
+            'category' => $request->category,
             'frequency' => $request->frequency,
+            'reminder_time' => $request->reminder_time,
             'start_date' => $request->start_date,
-            'end_date' => $request->end_date,
+        ]);
+
+        // Obtener el ID del hábito creado
+        $habit_id = $habit->id;
+
+        //crea un recordatorio para el habit
+        Reminders::create([
+            'habit_id' => $habit_id,
+            'reminder_time' => $request->reminder_time,
         ]);
 
         return redirect('/habits');
@@ -96,7 +98,7 @@ class HabitsController extends Controller
         $habit->name = $request->input('name');
         $habit->description = $request->input('description');
         $habit->start_date = $request->input('start_date');
-        $habit->end_date = $request->input('end_date');
+        $habit->reminder_time = $request->input('reminder_time');
         $habit->category = $request->input('category');
         $habit->frequency = $request->input('frequency');
 

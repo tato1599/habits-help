@@ -9,7 +9,6 @@
             </a>
 
             <div class="bg-white dark:bg-gray-800 shadow-xl sm:rounded-lg p-6">
-
                 <h2 class="text-2xl font-semibold mb-6 dark:text-white">Create a New Habit</h2>
 
                 <form action="{{ route('habits.store') }}" method="POST">
@@ -35,8 +34,8 @@
                         </div>
 
                         <div>
-                            <label for="end_date" class="block text-sm font-medium text-gray-700 dark:text-white">End Date:</label>
-                            <input type="date" name="end_date" id="end_date" required
+                            <label for="reminder_time" class="block text-sm font-medium text-gray-700 dark:text-white">Reminder Time:</label>
+                            <input type="time" name="reminder_time" id="reminder_time" required
                                    class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                         </div>
                     </div>

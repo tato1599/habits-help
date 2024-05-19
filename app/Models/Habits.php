@@ -16,7 +16,7 @@ protected $fillable = [
     'frequency',
     'category', // Add this line
     'start_date',
-    'end_date',
+    'reminder_time', // Add this line
     'created_at',
     'updated_at',
 ];
