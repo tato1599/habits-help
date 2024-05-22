@@ -4,8 +4,9 @@ use App\Http\Controllers\HabitsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RemindersController;
 
+//empezar en la pagina de login de jetstream si no esta autenticado
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
 });
 
 Route::middleware([
