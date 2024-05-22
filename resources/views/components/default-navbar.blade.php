@@ -7,7 +7,7 @@
         <div class="flex flex-wrap justify-between items-center">
             <div class="flex justify-start items-center">
                 <a href="/" class="flex mr-4">
-                  <img src="https://flowbite.s3.amazonaws.com/logo.svg" class="mr-3 h-8" alt="FlowBite Logo" />
+                  <img src=" {{ asset('icons/habitosnav.png') }}" alt="Habits Help Logo" class="w-10 h-10" />
                   <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Habits Help</span>
                 </a>
               </div>
