@@ -9,6 +9,17 @@ Route::get('/', function () {
     return redirect('/login');
 });
 
+//storage de imagenes
+Route::get('/storage/icons/{filename}', function ($filename)
+{
+    $path = storage_path('app/public/' . $filename);
+    if (!file_exists($path)) {
+        abort(404);
+    }
+    return response()->file($path);
+});
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

@@ -13,49 +13,49 @@ return [
         'status_bar'=> 'black',
         'icons' => [
             '72x72' => [
-            'path' => '/icons/habitos.png',
+            'path' => 'images/icons/habitos.png',
             'purpose' => 'any'
             ],
             '96x96' => [
-            'path' => '/icons/habitos.png',
+            'path' => 'images/icons/habitos.png',
             'purpose' => 'any'
             ],
             '128x128' => [
-            'path' => '/icons/habitos.png',
+            'path' => 'images/icons/habitos.png',
             'purpose' => 'any'
             ],
             '144x144' => [
-            'path' => '/icons/habitos.png',
+            'path' => 'images/icons/habitos.png',
             'purpose' => 'any'
             ],
             '152x152' => [
-            'path' => '/icons/habitos.png',
+            'path' => 'images/icons/habitos.png',
             'purpose' => 'any'
             ],
             '192x192' => [
-            'path' => '/icons/habitos.png',
+            'path' => 'images/icons/habitos.png',
             'purpose' => 'any'
             ],
             '384x384' => [
-            'path' => '/icons/habitos.png',
+            'path' => 'images/icons/habitos.png',
             'purpose' => 'any'
             ],
             '512x512' => [
-            'path' => '/icons/habitos.png',
+            'path' => 'images/icons/habitos.png',
             'purpose' => 'any'
             ],
         ],
         'splash' => [
-            '640x1136' => '/icons/habitos.png',
-            '750x1334' => '/icons/habitos.png',
-            '828x1792' => '/icons/habitos.png',
-            '1125x2436' => '/icons/habitos.png',
-            '1242x2208' => '/icons/habitos.png',
-            '1242x2688' => '/icons/habitos.png',
-            '1536x2048' => '/icons/habitos.png',
-            '1668x2224' => '/icons/habitos.png',
-            '1668x2388' => '/icons/habitos.png',
-            '2048x2732' => '/icons/habitos.png',
+            '640x1136' => 'images/icons/habitos.png',
+            '750x1334' => 'images/icons/habitos.png',
+            '828x1792' => 'images/icons/habitos.png',
+            '1125x2436' => 'images/icons/habitos.png',
+            '1242x2208' => 'images/icons/habitos.png',
+            '1242x2688' => 'images/icons/habitos.png',
+            '1536x2048' => 'images/icons/habitos.png',
+            '1668x2224' => 'images/icons/habitos.png',
+            '1668x2388' => 'images/icons/habitos.png',
+            '2048x2732' => 'images/icons/habitos.png',
         ],
         // 'shortcuts' => [
         //     [
