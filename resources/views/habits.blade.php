@@ -18,12 +18,8 @@
                     @forelse ($habits as $habit)
                         <div class="block mb-4 p-4 border rounded-lg shadow-md bg-white dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300 ease-in-out">
                             <p class="font-bold text-lg text-gray-800 dark:text-white">{{ $habit->name }}</p>
-                            <p class="text-gray-600 dark:text-gray-300">{{ $habit->description }}</p>
-                            <div class="mt-2 flex items-center">
-                                <p class="text-sm text-gray-500">
-                                    Completion Status: {{ $habit->complete ? 'Complete' : 'Incomplete' }}
-                                </p>
-                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">Category: {{ $habit->category }}</p>
+                            <p class="text-gray-600 dark:text-gray-300">Reminder time: {{ $habit->reminder_time }}</p>
                             <div class="flex items-center space-x-4 mt-4">
                                 <a href="{{ route('habits.edit', $habit->id) }}"
                                    class="text-white inline-flex items-center bg-green-500 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">

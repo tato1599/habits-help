@@ -111,9 +111,13 @@ class HabitsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Habits $habits)
+    public function destroy($id)
     {
-        $habits->delete();
+        // Encuentra el hábito a eliminar
+        $habit = Habits::findOrFail($id);
+
+        // Elimina el hábito de la base de datos
+        $habit->delete();
 
         return redirect('/habits');
     }
